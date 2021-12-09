@@ -7,7 +7,7 @@ public class HelloMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String nome = "";
-		int idade = 0;
+		String idade = "";
 		String cidade = "";
 		String conhece = "";
 		String certeza = "";
@@ -15,57 +15,53 @@ public class HelloMain {
 		String seConheceram = "";
 		String eOAlex = "";
 		String desejaLer="";
-		System.out.println("_______________________________________________________________________________________________"
-				+ "\nPRIEST: Bem vindo(a)! Esté é um questionário MUITO importante!"
-				+ "\nLeia as questões com atenção e responda com calma!"
-				+ "\nVamos lá!"
-				+ "\nMas antes de começarmos, peça para a Alexa tocar a playlist 'This is Foo Fighters no Spotify'!"
+		System.out.println("PRIEST: Bem vindo(a)! Esté é um questionário MUITO importante!"
+				+ "\nLeia as questões em voz alta e responda com atenção!"
+				+ "\nAntes de começarmos, peça para a Alexa tocar a playlist 'This is Foo Fighters no Spotify'!"
 				+ "\nPronto para começar? Se sim, aperte a tecla ENTER!"
 				+ ""
 				+ "\n_______________________________________________________________________________________________");
 		scanner.nextLine();
-		System.out.println("_______________________________________________________________________________________________"
-				+ "\nPRIEST: Antes de mais nada, me diga seu nome:"
+		System.out.println("PRIEST: Antes de mais nada, me diga seu nome:"
 				+ "\n_______________________________________________________________________________________________");
 		nome = scanner.next();
-		System.out.println("_______________________________________________________________________________________________"
-				+ "\nPRIEST: Olá " + nome + ". Muito prazer. Meu nome é Priest!"
-				+ "\nFui desenvolvida para entregar ao final dessa pesquisa, uma carta criptogradada!"
-				+ "\nPor questões de segurança, preciso confirmar que você é a pessoa que estou buscando!"
+		System.out.println("\n");
+		System.out.println("PRIEST: Olá " + nome + ". Muito prazer. Meu nome é Priest!"
+				+ "\nTenho uma entrega para fazer!"
+				+ "\nPor questões de segurança, preciso confirmar que você é a pessoa que estou procurando!"
 				+ "\nPara isso, vou precisar que você me responda mais algumas perguntas."
-				+ "\nQual a sua idade?"
+				+ "\nVamos lá"
+				+ "\nQual a sua idade? Informe apenas o número."
 				+ "\n_______________________________________________________________________________________________");
-		idade = scanner.nextInt();
-		System.out.println("_______________________________________________________________________________________________"
-				+ "\nPRIEST: Certo!"
-				+ "\nVocê é natural de qual cidade?"
+		idade = scanner.next();
+		System.out.println("\n");
+		System.out.println("PRIEST: Certo!"
+				+ "\nE você é natural de qual cidade?"
 				+ "\n_______________________________________________________________________________________________");
 		cidade = scanner.next();
-		System.out.println("_______________________________________________________________________________________________"
-				+ "\nPRIEST: "+ cidade + " - SP? Legal! Conheço uma mineira que mora aí."
-				+ "Jéssica Luz, conhece?"
+		System.out.println("\n");
+		System.out.println("PRIEST: "+ cidade + " - SP? Legal!. Conheço alguém que mora em "+ cidade + ". "
+				+ "Jéssica Luz, conhece? Responda sim ou não!"
 				+ "\n_______________________________________________________________________________________________");
 		conhece = scanner.next();
+		System.out.println("\n");
 		if(conhece.equalsIgnoreCase("sim")) {
-			System.out.println("_______________________________________________________________________________________________"
-					+ "\nPRIEST: Interessante..."
-					+ "\nVocês se conheceram no trabalho?"
+			System.out.println("PRIEST: Interessante..."
+					+ "\nVocês se conheceram no trabalho? Responda sim ou não"
 					+ "\n_______________________________________________________________________________________________");
 			seConheceram = scanner.next();
-			if(seConheceram.equals("sim")) {
-				System.out.println("_______________________________________________________________________________________________"
-						+ "\nPRIEST: Certo."
-						+ "\nBom, até aqui, tudo indica que seja você a pessoa que estou buscando."
-						+ "\nA Jéssica comentou comigo que em 2019 quando chegou a Campinas, conheceu um tal de "
-						+ "\nnAlex de Americana, que trabalhava na mesma empresa que ela e que logo "
-						+ "\ncomeçaram a se relacionar. Esse alex é você?"
+			System.out.println("\n");
+			if(seConheceram.equalsIgnoreCase("sim")) {
+				System.out.println("PRIEST: Bom, até aqui, tudo indica que seja você a pessoa que estou buscando."
+						+ "\nUltima pergunta só pra confirmar. O que você é dela?"
 						+ "\n_______________________________________________________________________________________________");
 				eOAlex = scanner.next();
-				if(eOAlex.equals("sim")) {
-					System.out.println("_______________________________________________________________________________________________"
-							+ "\nPRIEST: Ufa! Finalmente te encontrei, "+ nome +"! Estou feliz por isso "
-							+ "\nA Jéssica me pediu para te entregar uma carta. Como comentei anteriormente, ela está criptografada!"
-							+ "\nPara ler seu conteúdo, copie o codigo e cole no campo 'Texto Criptografado' do site: "
+				System.out.println("\n");
+				if(eOAlex.equalsIgnoreCase("namorado") || eOAlex.equalsIgnoreCase("marido")) {
+					System.out.println("PRIEST: Ufa! Finalmente te encontrei, "+ nome +"! Estou feliz por isso "
+							+ "\nA Jéssica me pediu para te entregar uma carta. "
+							+ "\nEla está criptografada!"
+							+ "\nPara ler seu conteúdo, copie o código e cole no campo 'Texto Criptografado' do site abaixo: "
 							+ "\nhttps://www.online-toolz.com/langs/pt/tool-pt-text-encryption-decryption.html"
 							+ "\n"
 							+ "\nDeseja ler agora?"
@@ -75,6 +71,7 @@ public class HelloMain {
 					System.out.println("_______________________________________________________________________________________________"
 							+ "\nPRIEST: OK. Aqui está seu código:"
 							+ "\n"
+
 							+ "\n"
 							+ "\nhdew3ifGZETJPlNOgfVmJonjt1VrMoCZ6aCzHp6zT7GFl79g4rTHpOZMcQE1oCF24o0aUOyZAOuacOGlplCKMyQyYCI4oQtR8f"
 							+ "\n1OCt5AVB9lCRCoaCvTF3PRpBZ6GAbtFYl5PZn7GBhu4GGzo86vMzN7Ay6+wknBOZiC/lRuGKLBvflYZoe5cSZGCHmHIiSA3IGg"
@@ -95,39 +92,35 @@ public class HelloMain {
 							+ "\nHGfPrxoZusmdjCvIcf3ZPGH/OXJaF08H6T98Z1QtF/EnOBJNr1P2OupN61l3Ak4WR6PUkk4fc3NweuCx0x+thE35czmNj4mD+g"
 							+ "\n8OKlh1mprboYKLDvGyGDp3zT1CVCQiHiVeRrfhsAxxxohtpLwLFArD0iClAx981yrL79hTL2f3qvShCrDiekA24iMq2Vs4IAPE"
 							+ "\nEgX0GuyqtueFioxu8MKNemKggS6sSAT5Or7w2qyxBCpsVwAoTiLuQj+sz+tBFqdW23n9bmo="
+							+ "\n"
+							+ "\n"
 							+ "\n_______________________________________________________________________________________________");
 
 				}else {
-					System.out.println("_______________________________________________________________________________________________"
-							+ "\nPRIEST: Poxa. Achei que dessa vez eu havia encontrado a pessoa que estava buscando. Mas"
+					System.out.println("PRIEST: Poxa. Achei que dessa vez eu havia encontrado a pessoa que estava buscando. Mas"
 							+ " ainda não foi dessa vez! De qualquer forma, agradeço sua atenção " + nome
 							+ "\n_______________________________________________________________________________________________");
 				}
 
 			}else {
-				System.out.println("_______________________________________________________________________________________________"
-						+ "\nPRIEST: Poxa. Achei que dessa vez eu havia encontrado a pessoa que estava buscando. Mas"
+				System.out.println("PRIEST: Poxa. Achei que dessa vez eu havia encontrado a pessoa que estava buscando. Mas"
 						+ " ainda não foi dessa vez! De qualquer forma, agradeço sua atenção " + nome
 						+ "\n_______________________________________________________________________________________________");
 			}
 		}else{
-			System.out.println("_______________________________________________________________________________________________"
-					+ "\nPRIEST: Tem certeza?"
+			System.out.println("PRIEST: Tem certeza?"
 					+ "\n_______________________________________________________________________________________________");
 			certeza = scanner.next();
 			if(certeza.equalsIgnoreCase("sim")) {
-				System.out.println("_______________________________________________________________________________________________"
-						+ "\nPRIEST: Poxa. Achei que dessa vez eu havia encontrado a pessoa que estava buscando. Mas"
+				System.out.println("PRIEST: Poxa. Achei que dessa vez eu havia encontrado a pessoa que estava buscando. Mas"
 						+ "ainda não foi dessa vez! De qualquer forma, agradeço sua atenção " + nome
 						+ "\n_______________________________________________________________________________________________");
 			}else {
-				System.out.println("_______________________________________________________________________________________________"
-						+ "\nPRIEST: Então você a conhece?"
+				System.out.println("pRIEST: Então você a conhece?"
 						+ "\n_______________________________________________________________________________________________");
 				aConhece = scanner.next();
 				if(aConhece.equalsIgnoreCase("sim")) {
-					System.out.println("_______________________________________________________________________________________________"
-							+ "\nPRIEST: Otimo, então vamos continuar!"
+					System.out.println("PRIEST: Otimo, então vamos continuar!r!"
 							+ "\n_______________________________________________________________________________________________");
 				}
 			}
@@ -135,4 +128,5 @@ public class HelloMain {
 	}
 
 }
+
 
